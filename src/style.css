@@ -1,0 +1,36 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: #e9edf6;
+  background: #eef1f6;
+  font-synthesis: none;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100svh; display: grid; place-items: center; }
+main { width: min(100%, 400px); padding: 36px 20px; }
+header { text-align: center; margin-bottom: 24px; color: #172033; }
+.app-icon { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: #3269ef; color: white; font-size: 26px; font-weight: 500; }
+h1 { font-size: 22px; font-weight: 650; letter-spacing: -.6px; margin: 12px 0 5px; }
+header p { margin: 0; color: #697386; font-size: 14px; }
+.calculator { background: #171d2b; border: 1px solid #2b3344; border-radius: 26px; padding: 20px; box-shadow: 0 24px 55px -20px #18294755, 0 4px 10px #18294710; }
+.screen { text-align: right; padding: 18px 6px 0; }
+#operation { color: #a4b0c4; font-size: 14px; min-height: 21px; margin: 0 0 12px; }
+output { display: block; min-height: 59px; font-size: clamp(25px, 7.3vw, 42px); font-weight: 400; letter-spacing: -1.5px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+#error { font-size: 12px; color: #ffb3b3; min-height: 32px; line-height: 16px; margin: 8px 6px 12px; }
+.keys { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+button { appearance: none; border: 1px solid #ffffff06; border-radius: 14px; min-height: 60px; background: #272f40; color: #f3f6ff; font: inherit; font-size: 23px; cursor: pointer; touch-action: manipulation; transition: background .12s, transform .12s; }
+button:hover { background: #354159; }
+button:active { transform: scale(.95); }
+button:focus-visible { outline: 3px solid #a4c2ff; outline-offset: 3px; }
+.utility { background: #354055; color: #d2dbea; font-size: 20px; }
+.operator { background: #243959; color: #9fc4ff; font-size: 28px; }
+.operator:hover { background: #314f7d; }
+.operator[aria-pressed="true"] { background: #406fb3; color: white; }
+.equals { background: #4279f5; color: white; font-size: 28px; }
+.equals:hover { background: #6190fa; }
+.zero { grid-column: span 2; }
+footer { text-align: center; font-size: 12px; line-height: 1.9; color: #697386; margin-top: 22px; }
+footer span { margin: 0 4px; }
+.hint { font-size: 11px; color: #7a8597; }
+@media (max-width: 360px) { main { padding: 20px 14px; } .calculator { padding: 16px; } button { min-height: 54px; } .keys { gap: 8px; } }
+@media (prefers-reduced-motion: reduce) { button { transition: none; } }

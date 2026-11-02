@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taschenrechner</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <main>
+    <header><span class="app-icon" aria-hidden="true">=</span><h1>Taschenrechner</h1><p>Einfach rechnen.</p></header>
+    <section class="calculator" aria-label="Taschenrechner">
+      <div class="screen"><p id="operation" aria-hidden="true">Bereit zum Rechnen</p><output id="display" aria-label="Ergebnis" aria-live="polite">0</output></div>
+      <p id="error" role="alert"></p>
+      <div class="keys">
+        <button data-key="clear" class="utility" aria-label="Alles zurücksetzen">C</button>
+        <button data-key="sign" class="utility" aria-label="Vorzeichen wechseln">±</button>
+        <button data-key="backspace" class="utility" aria-label="Letzte Ziffer löschen">⌫</button>
+        <button data-key="/" class="operator" aria-label="Dividieren">÷</button>
+        <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button><button data-key="*" class="operator" aria-label="Multiplizieren">×</button>
+        <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button><button data-key="-" class="operator" aria-label="Subtrahieren">−</button>
+        <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button><button data-key="+" class="operator" aria-label="Addieren">+</button>
+        <button data-key="0" class="zero">0</button><button data-key="." aria-label="Dezimalkomma">,</button><button data-key="=" class="equals" aria-label="Ergebnis berechnen">=</button>
+      </div>
+    </section>
+    <footer>Tastatur unterstützt <span aria-hidden="true">·</span> Enter für das Ergebnis<br><span class="hint">Esc zum Zurücksetzen · F9 für ±</span></footer>
+  </main>
+</body>
+</html>
